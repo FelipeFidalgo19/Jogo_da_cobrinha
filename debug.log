@@ -1,0 +1,8 @@
+[0321/180950.461:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[0321/180950.475:ERROR:exception_snapshot_win.cc(98)] thread ID 1632 not found in process
+[0321/180950.476:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0321/231002.477:ERROR:process_info.cc(359)] UncheckedAllocate
+[0322/030734.066:ERROR:process_info.cc(359)] UncheckedAllocate
+[0322/031013.829:ERROR:process_info.cc(359)] UncheckedAllocate
+[0322/110735.575:ERROR:process_info.cc(359)] UncheckedAllocate
+[0322/141101.657:ERROR:process_info.cc(359)] UncheckedAllocate
