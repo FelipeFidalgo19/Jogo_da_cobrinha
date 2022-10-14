@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meu primeiro game</title>
+    <link rel="stylesheet" type="text/css" href="../estilo.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+  </head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <h1>JOGO DA COBRINHA</h1>
+    
+    <button onclick="keyPush(87)">Cima</button>
+    <button onclick="keyPush(65)">Esquerda</button>
+    <button onclick="keyPush(68)">Direita</button>
+    <button onclick="keyPush(83)">Baixo</button>
+
+    <script type="text/javascript">
+      const localhost = "http://192.168.0.31:5000";
+      var socket = io(localhost);
+
+    document.addEventListener("keydown", keyPush);
+      function keyPush(event) {
+        if(event.keyCode){
+            switch (event.keyCode) {
+              case 65: //Left - esqueda tecla
+                socket.emit("fs-share", 65);
+                break;
+              case 87: //up - pra cima tecla
+                socket.emit("fs-share", 87);
+                break;
+              case 68: //right - direita tecla
+                socket.emit("fs-share", 68);
+                break;
+              case 83: //down - baixo tecla
+                socket.emit("fs-share", 83);
+                break;
+              default:
+                break;
+            }
+        }else{
+            switch (event) {
+              case 65: //Left - esqueda tecla
+                socket.emit("fs-share", 65);
+                break;
+              case 87: //up - pra cima tecla
+                socket.emit("fs-share", 87);
+                break;
+              case 68: //right - direita tecla
+                socket.emit("fs-share", 68);
+                break;
+              case 83: //down - baixo tecla
+                socket.emit("fs-share", 83);
+                break;
+              default:
+                break;
+            }
+        }
+      }
+    </script>
+  </body>
+</html>
